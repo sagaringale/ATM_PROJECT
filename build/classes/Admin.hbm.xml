@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+   
+   
+   <hibernate-mapping>
+   		<class name="co.Admin" table="Admin" lazy="false" >
+   			<id name="adminId" type="int">
+   				<column name="a_id" />
+   				<generator class="increment"></generator>
+   			</id>
+   		
+   			<property name="adminName" column="a_name"></property>
+   			<property name="adminAddress" column="a_address"></property>
+   			<property name="contactNumber" column="a_contact"></property>
+   			<property name="adminPin" column="a_pin"></property>
+   		</class>
+   </hibernate-mapping>

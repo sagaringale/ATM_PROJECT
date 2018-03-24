@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+   
+   
+   <hibernate-mapping>
+   		<class name="co.Transaction" table="Transaction" lazy="false" >
+   			<id name="tId" type="int">
+   				<column name="T_id" />
+   				<generator class="increment"></generator>
+   			</id>
+   		
+   			<property name="tType" column="T_type"></property>
+   			<property name="tamount" column="T_amount"></property>
+   				<property name="tdate" column="T_date"></property>
+   				<property name="accountNumber" column="c_id"></property>
+   		</class>
+   </hibernate-mapping>

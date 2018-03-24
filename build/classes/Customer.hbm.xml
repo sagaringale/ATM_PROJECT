@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+   
+   
+   <hibernate-mapping>
+   		<class name="co.Customer" table="Customer" lazy="false" >
+   			<id name="customerId" type="int">
+   				<column name="c_id" />
+   				<generator class="assigned"></generator>
+   			</id>
+   		
+   			<property name="customerName" column="c_name"></property>
+   			<property name="customerEmail" column="c_email"></property>
+   		
+   			
+   			<property name="customerDOB" type="java.util.Date" column="c_dob"></property>
+   			<property name="customerAddress" column="c_address"></property>
+   			<property name="contactNumber" column="c_contact"></property>
+   		</class>
+   </hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+   
+   
+   <hibernate-mapping>
+   		<class name="co.BankBranch" table="BankBranch" lazy="false" >
+   			<id name="branchId" type="int">
+   				<column name="b_id" />
+   				<generator class="increment"></generator>
+   			</id>
+   		
+   			<property name="branchName" column="b_name"></property>
+   			<property name="branchAddress" column="b_address"></property>
+   		</class>
+   </hibernate-mapping>

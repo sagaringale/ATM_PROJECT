@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+   
+   
+   <hibernate-mapping>
+   		<class name="co.Account" table="Account" lazy="false" >
+   			<id name="accountNumber" type="int">
+   				<column name="account_no" />
+   				<generator class="assigned"></generator>
+   			</id>
+   		
+   			<property name="accountPin" column="account_pin"></property>
+   			<property name="currentAmount" column="a_balance"></property>
+   				<property name="accounttype" column="account_type"></property>
+   		</class>
+   </hibernate-mapping>

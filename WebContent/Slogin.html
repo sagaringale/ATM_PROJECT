@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Secure storage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link href="tooplate_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+//nitin
+ function fn()
+ {  
+    var usr= document.forms["f1"]["fnm"].value;
+    var lusr= document.forms["f1"]["lnm"].value;
+    var x = document.forms["f1"]["eid"].value;
+    var pswd1= document.forms["f1"]["pswd"].value;
+    var pswd2= document.forms["f1"]["pswd2"].value;
+    var bmonth=document.forms["f1"]["birthday_month"].value;   
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    var passw = /^[A-Za-z]\w{7,14}$/;  
+    if(usr.length<3 || usr.length>15)
+    {       
+	    alert("First name should be greater than 2 and less than 16"); 
+	    f1.fnm.value="";
+	    f1.fnm.focus();
+            
+	    return false;
+		
+    }
+
+    else if(lusr.length<3 || lusr.length>15)
+    {       
+	    alert("lastname name should be greater than 2 and less than 16"); 
+	    f1.lnm.value="";
+	    f1.lnm.focus();
+	    return false;
+		
+    }
+
+    else if(atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+     {
+		
+         alert("Not a valid e-mail address");
+	 f1.eid.value="";
+	 f1.eid.focus();
+	 return false;
+
+
+       }
+
+    else if((pswd1.value.match(passw))!=0)
+         {
+          alert("Valid password");
+          f1.pswd.value="";
+	 f1.pswd.focus();
+	 return false;
+
+         }
+          
+  /*
+    else if(pswd1.length<3 || pswd1.length>20)
+    {       
+	    alert("Password should be greater than 3 and less than 20 characters"); 
+	    f1.pswd.value="";
+	    f1.pswd.focus();
+	    return false;
+		
+    }
+   else if(pswd1!=pswd2)
+     {
+      alert("Confirm password and password should be same!!!"); 
+      f1.pswd2.value="";
+      f1.pswd2.focus();
+      return false;
+     }*/
+
+/*
+
+function pas()
+  {
+   var pas,i,ch;
+    pas=f1.pswd.value;
+    for(i=0;i<pas.length;i++)
+     {
+      ch=pas.charAt(i);
+      if(ch=="")
+       {
+       f1.pswd.value="";
+        f1.pswd.focus();
+        return false;
+        break;
+       }
+     }
+   return true;
+  }
+ 
+ function empty_sec_pas()
+  {
+   var e_sec_pswd;
+   e_sec_pswd=f1.pswd2.value;
+    if(e_sec_pswd=='')
+     {
+      f1.pswd2.value="";
+      f1.pswd2.focus();
+       return false;
+     }
+    return true;
+  }
+ 
+ function sec_pas()
+  {
+   var first_pswd,sec_pswd;
+    first_pswd=f1.pswd.value;
+    sec_pswd=f1.pswd2.value;
+    if(first_pswd!=sec_pswd)
+     {
+      f1.pswd2.value="";
+      f1.pswd2.focus();
+      return false;
+     }
+   return true;
+  }   
+
+
+
+
+*/
+   
+   if(bmonth.value== "")// || room=="(select)" || blood=="(select)" || doctor=="(select)")
+		{
+			alert("Please Fill All The Details!!");
+			//f1.birthday_month.value="";
+  			//f1.birthday_month.focus();
+                        return false;
+		}
+		
+
+}
+  /*if(flag_fnm==1)
+   {
+   window.location.replace("signup.html");
+   }
+   else 
+   {
+    Location="signup.jsp";
+   }*/
+//nitin
+
+</script>
+
+</head>
+<body class="subpage">
+
+<div id="tooplate_wrapper">
+
+	<div id="tooplate_sidebar">
+		<div id="site_title"><a href="#"><span></span></a></div>
+         
+        <div id="home_service">
+        	<div class="home_service_box"><span class="service1"></span><h5><a href="#">Service One</a></h5>Free Storage</div>
+            <div class="home_service_box"><span class="service2"></span><h5><a href="#">Service Two</a></h5>
+            Quick Share</div>
+            <div class="home_service_box"><span class="service3"></span><h5><a href="#">Service Three</a></h5>Secure Storage</div>
+        </div>
+       
+        <!--<div id="home_service">
+        	<div class="home_service_box"><span class="service1"></span><h5><a href="#">Service One</a></h5>Integer sit amet nulla vitae urna porttitor quis et tellus.</div>
+            <div class="home_service_box"><span class="service2"></span><h5><a href="#">Service Two</a></h5>
+            Morbi lectus erat, tempus ac mattis eu, fringilla id elit.</div>
+            <div class="home_service_box"><span class="service3"></span><h5><a href="#">Service Three</a></h5>Nulla quam mi, faucibus non laoreet nec.</div>
+        </div>-->
+        
+        <div class="sidebar_box">
+        	<h4>Newsletter</h4>	
+			
+			<div id="newsletter_box">
+			<form action="#" method="get">			
+			Please enter your email address to subscribe our newsletter.<br />
+			<input type="text" id="newsletter_email" name="newsletter_email" class="newsletter_email" />				           
+            <input type="submit" name="submit_subscribe" id="submit_subscribe" value="Subscribe" />
+            </form>
+			</div>		
+			
+            <div class="cleaner"></div>
+        </div>
+       
+
+
+	<div class="sidebar_box sbb_last">
+            <strong>Who we Are?</strong><br />
+            We Are Students of Mca(Science)<br />
+        	<b>Email:</b> <a href="mailto:info@yoursite.com">securestorage@gmail.com</a>		
+		</div>
+	</div> <!-- end of sidebar -->
+    
+
+ 
+     <!-- 	<div class="sidebar_box sbb_last">
+            <strong>Company Name</strong><br />
+            172-168 Curabitur massa ipsum, <br />
+            Proin dignissim molestie, 15500<br />
+            Venenatis ut turpis<br />
+        	<b>Email:</b> <a href="mailto:info@yoursite.com">info@yoursite.com</a>		
+		</div>
+	</div> <!-- end of sidebar -->
+   
+    <div id="tooplate_main">
+    	
+        <div id="tooplate_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="about.html">About Us</a></li>-->
+                <li><a href="services.html" class="current">Services</a></li>
+		<li><a href="login.html">Login</a></li>
+		<li><a href="signup.html">Signup</a></li>
+               
+                <!--<li><a href="gallery.html">Gallery</a></li>-->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>    	
+        </div> <!-- end of tooplate_menu -->
+        
+        <div id="content_title_box">
+	        <h2><b><center>SIGN UP</center></b></h2>
+			<p><b><center>It's Free And Always Will Be!</center></b></p>
+        </div>
+
+        <div id="tooplate_content">
+
+           	<div class="service_box">
+<form name="f1" action="signup.jsp" onsubmit="return fn()" method="post">
+<div id=container style="width:500px; position:relative">
+<!--<div id="header">
+
+<h1><b><font color=magenta>Sign Up</font></b></h1>
+</div>-->
+<!--<div id="section">-->
+<center>
+<br>
+<table border=0 cellspacing=1 cellpadding=5 height=400 width=700>
+<tr><td align=right width=100><b><font color=black>First Name:</font><b></td><td width=150><input type="text" name="fnm" size="25" required></td></tr>
+
+<tr><td align=right width=100><b><font color=black>Last Name:</font><b></td><td width=150><input type="text" name="lnm"  size="25" required></td></tr>
+
+<tr><td align=right width=100><b><font color=black>Email:</font><b></td><td width=150><input type="text" name="eid" id="eid" size="25" required></td></tr>
+
+<tr><td align=right width=100><b><font color=black>New Password:</font><b></td><td width=150><input type="password" name="pswd" MAXLENGTH="15" size="25" required></td></tr>
+
+<tr><td align=right width=100><b><font color=black>Confirm Password:</font><b></td><td width=150><input type="password" name="pswd2" size="25" required></td></tr>
+
+<tr><td align=right width=100><b><font color=black>Security Question:</font><b></td><td width=150><select name=s1 required>
+<option value=0 selected>What is your mother's name?</option>
+<option value=1>What is your nick name?</option>
+<option value=2>Your hometown name</option>
+<option value=3>What is your pet's name?</option>
+<option value=4>What is your best friends name?</option>
+</select></td></tr>
+
+<tr><td align=right width=100><b><font color=black>Answer:</font><b></td><td width=150><input type="text" name="secans" size="25" required></td></tr>
+
+<tr><td align=right width=100><b><font color=black>Birthday:</font><b></td>
+<td width=150>
+<div class="mtm mbs _58mr"><!--Birthday--></div><div class="_5k_5">
+
+<span class="_5k_4" data-type="selectors" data-name="birthday_wrapper" id="u_0_c">
+<span>
+<!--<select name="bloodgroup">
+<option value="(select)" selected>(select)</option>
+-->
+
+
+<select aria-label="Month" name="b_mon" id="month" title="Month" class="_5dba">
+<option value="0" selected="1">Month</option>
+<!--<select name="birthday_month" >
+<option value="" selected >Month</option>-->
+        
+<option value="1">Jan</option><option value="2">Feb</option>
+<option value="3">Mar</option><option value="4">Apr</option>
+<option value="5">May</option><option value="6">Jun</option>
+<option value="7">Jul</option><option value="8">Aug</option>
+<option value="9">Sep</option><option value="10">Oct</option>
+<option value="11">Nov</option><option value="12">Dec</option>
+</select>
+<select aria-label="Day" name="b_day" id="day" title="Day" class="_5dba">
+<option value="0" selected="1">Day</option><option value="1">1</option>
+<option value="2">2</option><option value="3">3</option><option value="4">4</option>
+<option value="5">5</option><option value="6">6</option><option value="7">7</option>
+<option value="8">8</option><option value="9">9</option><option value="10">10</option>
+<option value="11">11</option><option value="12">12</option><option value="13">13</option>
+<option value="14">14</option><option value="15">15</option><option value="16">16</option>
+<option value="17">17</option><option value="18">18</option><option value="19">19</option>
+<option value="20">20</option><option value="21">21</option><option value="22">22</option>
+<option value="23">23</option><option value="24">24</option><option value="25">25</option>
+<option value="26">26</option><option value="27">27</option><option value="28">28</option>
+<option value="29">29</option><option value="30">30</option><option value="31">31</option>
+</select>
+<select aria-label="Year" name="b_year" id="year" title="Year" class="_5dba"><option value="0" selected="1">Year</option>
+<option value="1997">1997</option><option value="1996">1996</option>
+<option value="1995">1995</option><option value="1994">1994</option>
+<option value="1993">1993</option><option value="1992">1992</option>
+<option value="1991">1991</option><option value="1990">1990</option>
+<option value="1989">1989</option><option value="1988">1988</option>
+<option value="1987">1987</option><option value="1986">1986</option>
+<option value="1985">1985</option><option value="1984">1984</option>
+<option value="1983">1983</option><option value="1982">1982</option>
+
+<option value="1981">1981</option><option value="1980">1980</option>
+<option value="1979">1979</option><option value="1978">1978</option>
+<option value="1977">1977</option><option value="1976">1976</option>
+<option value="1975">1975</option><option value="1974">1974</option>
+<option value="1973">1973</option><option value="1972">1972</option>
+
+<option value="1971">1971</option><option value="1970">1970</option>
+<option value="1969">1969</option><option value="1968">1968</option>
+<option value="1967">1967</option><option value="1966">1966</option>
+<option value="1965">1965</option><option value="1964">1964</option>
+<option value="1963">1963</option><option value="1962">1962</option>
+
+<option value="1961">1961</option><option value="1960">1960</option>
+<option value="1959">1959</option><option value="1958">1958</option>
+<option value="1957">1957</option><option value="1956">1956</option>
+<option value="1955">1955</option><option value="1954">1954</option>
+<option value="1953">1953</option><option value="1952">1952</option>
+<option value="1951">1951</option><option value="1950">1950</option>
+<option value="1949">1949</option><option value="1948">1948</option>
+
+<option value="1947">1947</option><option value="1946">1946</option>
+<option value="1945">1945</option><option value="1944">1944</option>
+<option value="1943">1943</option><option value="1942">1942</option>
+<option value="1941">1941</option><option value="1940">1940</option>
+<option value="1939">1939</option><option value="1938">1938</option>
+<option value="1937">1937</option><option value="1936">1936</option>
+<option value="1935">1935</option><option value="1934">1934</option>
+
+</select>
+</span>
+
+</td></tr>
+
+<tr><td align=right width=100><b><font color=black>Gender:</font><b></td><td width=150>
+<input type=radio value=M name=gend>Male <input type=radio value=F name=gend>Female<br>
+</td></tr>
+<tr><td align=center colspan=2>
+<input type=hidden value=0 name="hi">
+<input type=image name=submit src="images/sign_up2.jpg" style="height:30px;width=30px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="index.html"><input type=submit value=Cancel></a>
+</td></tr>
+</table>
+</center>
+</div>
+</form>
+
+
+<div class="right">
+                                    </div>
+				
+                <div class="cleaner"></div> 
+            </div>
+
+        </div> <!-- end of content -->
+    
+    </div> <!-- end of content -->
+	
+    <div class="cleaner"></div>    
+</div> <!-- end of wrapper -->
+
+<div id="tooplate_footer_wrapper">
+	<div id="tooplate_footer">
+
+        <a href="index.html">Home</a> <!--| <a href="about.html">About Us</a> -->| <a href="services.html">Services</a> <!--| <a href="gallery.html">Gallery</a>--> | <a href="contact.html">Contact</a> <br /><br />
+        
+        Copyright © 2017 <a href="#">CompanyName</a> - Design:SecureStorage <a href="Nehadeshpande1995@blogspot.com"></a>
+		
+    </div>
+</div>
+
+</body>
+</html>
