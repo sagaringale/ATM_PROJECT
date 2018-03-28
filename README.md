@@ -23,7 +23,7 @@ This project was generated with [Java]
 	service and set up password and we can access account summery, account
 	information and add money and other credentials
 	
-![Admin-Login-Screen](Admin-Login-Screen.png)
+![Screenshot](adminlogin.png)
 
 
 #### Runing Application:
