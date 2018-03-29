@@ -27,20 +27,6 @@ This project was generated with [Java]
 
 ![Screenshot](adminlogin.jpg)
 
-# Admin login screen
-
-![Screenshot](Admin-Login-Screen.png)
-
-# ATM
-
-![Screenshot](ATM.jpg)
-
-# ATM PIN
-
-![Screenshot](atm-pin1.png)
-
-
-
 
 #### Runing Application:
  
