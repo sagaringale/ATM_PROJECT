@@ -26,6 +26,7 @@ This project was generated with [Java]
 # Admin login
 
 ![Screenshot](adminlogin.jpg)
+
 ![Screenshot](ATM.jpg)
 
 
